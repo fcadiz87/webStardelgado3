@@ -53,7 +53,7 @@ class serDocente
 
 	function actualizar($campos,$id){
 		if($this->con->conectar()==true){
-			print_r($campos);
+			//print_r($campos);
 			return mysql_query("UPDATE serDocente SET donombre = '".$campos[0]."', doexperiencia = '".$campos[1]."', docodpai = '".$campos[2]."', docodest = '".$campos[3]."' WHERE docodigo = ".$id);
 			//UPDATE serdocente SET donombre = 'Weimar', doexperiencia = '7', docodest = '10003' WHERE docodigo = 15;
 		}

@@ -1,6 +1,7 @@
-<?php 
-	include ('inc/header.inc'); 
 
+<?php 	include ('inc/header.inc');  ?>
+
+<?php 
 
 	//require('capalogicadenegocio/serestado.class.php');
 	//require('clases/serdocente.class.php');
@@ -9,17 +10,17 @@
 	{
 		require('capalogicadenegocio/serdocente.class.php');
 		$objDocente=new serdocente;
-		echo "Primer parrafo de Actulizar Docente...";
+		//echo "Primer parrafo de Actulizar Docente...";
 		$codigo=htmlspecialchars(trim($_REQUEST['coddoc']));
-		echo "$codigo";
+		//echo "$codigo";
 		$nombDoc=htmlspecialchars(trim($_POST['nomdoc']));
-		echo "$nombDoc";
+		//echo "$nombDoc";
 		$exp=htmlspecialchars(trim($_POST['expDoc']));
-		echo "$exp";
+		//echo "$exp";
 		$pai=htmlspecialchars(trim($_POST['comboPais']));
-		echo "$pai";
+		//echo "$pai";
 		$estado = htmlspecialchars(trim($_POST['comboEstado']));
-		echo "$estado";
+		//echo "$estado";
 		
 		if ( $objDocente->actualizar(array($nombDoc,$exp,$pai,$estado),$codigo) == true){
 			echo 'Datos modificados correctamente...';

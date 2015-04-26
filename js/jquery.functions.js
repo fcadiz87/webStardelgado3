@@ -21,10 +21,10 @@
 	
 	function GrabarDatosDocente(){
 		var codigoDoc = $("#cod").attr("value");
-		alert(codigoDoc)
+		//alert(codigoDoc)
 
 		var nombreDoc = document.getElementById("nombDoc").value;
-		alert(nombreDoc)
+		//alert(nombreDoc)
 
 		var expeDoc = document.getElementById("expe").value;
 		//alert(expeDoc)
@@ -44,8 +44,8 @@
         		window.location.replace("registrarDocente.php");
     		},
     		success: function(datos){
-				//console.log(datos);
-				alert(datos);
+				var msgCorto= datos.substring(2010);
+				alert(msgCorto);
 				ConsultaDatos();
 				/*$("#formulario").hide();
 				$("#tabla").show();*/
@@ -56,22 +56,24 @@
 
 	function ActualizarDatos(){
 		var codigoDoc = document.getElementById("coddoc").value;
-		alert(codigoDoc)
+		//alert("Actualizando Datos en AJAX")
 		var nombreDoc = document.getElementById("nomdoc").value;
-		alert(nombreDoc)
+		//alert(nombreDoc)
 		var experienciaDoc = document.getElementById("expDoc").value;
-		alert(experienciaDoc)
+		//alert(experienciaDoc)
 		var codPais = document.getElementById("comboPais").value;
-		alert(codPais)	
+		//alert(codPais)	
 		var codEst = document.getElementById("comboEstado").value;
-		alert(codEst)	
+		//alert(codEst)	
 
 		$.ajax({
 			url: 'modificarDocente.php',
 			type: "POST",
 			data: "submit=&nomdoc="+nombreDoc+"&expDoc="+experienciaDoc+"&comboPais="+codPais+"&comboEstado="+codEst+"&coddoc="+codigoDoc,
 			success: function(datos){
-				alert(datos);
+				var msgCorto= datos.substring(2012);
+				alert(msgCorto);
+				//alert(datos);
 				ConsultaDatos();
 				/*$("#formulario").hide();
 				$("#tabla").show();*/

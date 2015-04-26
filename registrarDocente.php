@@ -34,13 +34,13 @@
 
 		$objDocente =new serdocente;
 		if ($objDocente->insertar(array($codigo, $nombDoc,$exp,$pai,$estado))==true) {
-			echo 'Guardado Correctamente';
+			echo 'Datos Guardados Correctamente';
 			/*echo "<script>";
 				echo "alert('Guardado Correctamente !!..');";
 				echo "location.replace('listarDocente.php')";
 			echo "</script>";	*/
 		} else {
-			echo 'Error al Guardar';
+			echo 'Error al Guardar Datos';
 
 			/*echo "<script>";
 				echo "alert('Se produjo un error. Intente nuevamente');";
